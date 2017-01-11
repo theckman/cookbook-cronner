@@ -1,3 +1,7 @@
+#
+# Cookbook Name:: cronner_lwrp_test
+# Recipe:: default
+#
 # Copyright 2017 Tim Heckman <t@heckman.io>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,17 +16,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name 'cronner'
-version '0.1.0'
-license 'Apache 2.0'
+include_recipe 'cronner'
 
-description 'Installs/Configures cronner'
-long_description 'Installs/Configures cronner'
-
-maintainer 'Tim Heckman'
-maintainer_email 't@heckman.io'
-
-issues_url 'https://github.com/theckman/cronner/issues' if respond_to?(:issues_url)
-source_url 'https://github.com/theckman/cronner' if respond_to?(:source_url)
-
-depends 'cron', '~> 3.0.0'
+cronner 'test job' do
+  command '/bin/true'
+  minute '0'
+  hour '12'
+  event true
+  event_fail true
+  log_fail true
+  event_group 'eventgroup'
+  metric_group 'metricgroup'
+  lock true
+  namespace 'testenv'
+  sensitive_output true
+  warn_after 10
+  wait_secs_for_lock
+end

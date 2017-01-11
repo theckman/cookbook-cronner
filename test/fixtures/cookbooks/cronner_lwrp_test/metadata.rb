@@ -12,17 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name 'cronner'
-version '0.1.0'
+name 'cronner_lwrp_test'
+version '0.0.1'
 license 'Apache 2.0'
-
-description 'Installs/Configures cronner'
-long_description 'Installs/Configures cronner'
 
 maintainer 'Tim Heckman'
 maintainer_email 't@heckman.io'
 
-issues_url 'https://github.com/theckman/cronner/issues' if respond_to?(:issues_url)
-source_url 'https://github.com/theckman/cronner' if respond_to?(:source_url)
+description 'Cookbook for integration tests of the cronner cookbook'
+long_description 'Cookbook for integration tests of the cronner cookbook'
 
-depends 'cron', '~> 3.0.0'
+depends 'cronner'
