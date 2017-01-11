@@ -1,3 +1,5 @@
+# # encoding: utf-8
+#
 # Copyright 2017 Tim Heckman <t@heckman.io>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,17 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name 'cronner'
-version '0.1.0'
-license 'Apache 2.0'
+# Inspec test for recipe cronner LWRP
 
-description 'Installs/Configures cronner'
-long_description 'Installs/Configures cronner'
-
-maintainer 'Tim Heckman'
-maintainer_email 't@heckman.io'
-
-issues_url 'https://github.com/theckman/cronner/issues' if respond_to?(:issues_url)
-source_url 'https://github.com/theckman/cronner' if respond_to?(:source_url)
-
-depends 'cron', '~> 3.0.0'
+describe file('/etc/cron.d/test_job') do
+  it { should be_file }
+  it { should be_readable }
+  its('owner') { should eql 'root' }
+  its('group') { should eql 'root' }
+  its('content') { should match /^# Crontab for test_job managed by Chef\./ }
+  its('content') do
+    should match %r(^0 12 \* \* \* root /usr/local/bin/cronner --label=test_job --namespace=testenv --event_group=eventgroup --metric_group=metricgroup --warn-after=10 --event --log-fail --lock --sensitive -- /bin/true$)
+  end
+end
