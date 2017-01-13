@@ -20,7 +20,7 @@ including it one of your recipes or by adding it to the `run_list`.
 ### Recipe Attributes
 This cookbook only has one attribute to impact the installation
 (`node['cronner']['default_install_version']`), which takes the cronner version
-string (e.g., `0.4.1`) that you want to have installed.
+string (e.g., `0.4.2`) that you want to have installed.
 
 ## LWRP Usage
 The `cronner` cookbook provides an LWRP to install cron jobs that are monitored
