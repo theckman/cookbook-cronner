@@ -13,7 +13,7 @@
 # limitations under the License.
 
 name 'cronner'
-version '0.2.2'
+version '0.2.3'
 license 'Apache 2.0'
 
 description 'Installs/Configures cronner'
@@ -22,7 +22,7 @@ long_description 'Installs/Configures cronner'
 maintainer 'Tim Heckman'
 maintainer_email 't@heckman.io'
 
-issues_url 'https://github.com/theckman/cronner/issues' if respond_to?(:issues_url)
-source_url 'https://github.com/theckman/cronner' if respond_to?(:source_url)
+issues_url 'https://github.com/theckman/cookbook-cronner/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/theckman/cookbook-cronner' if respond_to?(:source_url)
 
 depends 'cron', '~> 3.0.0'

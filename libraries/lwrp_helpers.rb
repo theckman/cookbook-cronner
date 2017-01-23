@@ -20,7 +20,7 @@ module Cronner
     end
 
     def command_string
-      label format_string(job_name) if label.nil? || label.empty?
+      label job_name if label.nil? || label.empty?
 
       c_str = '/usr/local/bin/cronner '
 
