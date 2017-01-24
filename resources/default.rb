@@ -63,6 +63,10 @@ property :lock, [TrueClass, FalseClass], default: false
 property :label, [String, NilClass], default: nil
 # flag: -N/--namespace
 property :namespace, [String, NilClass], default: nil
+# flag: -p/--passthru
+property :passthru, [TrueClass, FalseClass], default: false
+# flag: -P/--use-parent
+property :use_parent, [TrueClass, FalseClass], default: false
 # flag: -s/--sensitive
 # use name sensitive_output to avoid colliding with built-in sensitive property
 property :sensitive_output, [TrueClass, FalseClass], default: false

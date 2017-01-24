@@ -36,6 +36,8 @@ module Cronner
       c_str << '--event-fail ' if event_fail && !event
       c_str << '--log-fail ' if log_fail
       c_str << '--lock ' if lock
+      c_str << '--use-parent ' if use_parent
+      c_str << '--passthru ' if passthru
       c_str << '--sensitive ' if sensitive_output
 
       c_str << "-- #{command}"
