@@ -25,6 +25,8 @@ cronner 'test job' do
   event true
   event_fail true
   log_fail true
+  use_parent true
+  passthru true
   event_group 'eventgroup'
   metric_group 'metricgroup'
   lock true
