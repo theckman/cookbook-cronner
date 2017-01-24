@@ -23,6 +23,6 @@ describe file('/etc/cron.d/test_job') do
   its('group') { should eql 'root' }
   its('content') { should match /^# Crontab for test_job managed by Chef\./ }
   its('content') do
-    should match %r(^0 12 \* \* \* root /usr/local/bin/cronner --label=test_job --namespace=testenv --event_group=eventgroup --metric_group=metricgroup --warn-after=10 --event --log-fail --lock --sensitive -- /bin/true$)
+    should match %r(^0 12 \* \* \* root /usr/local/bin/cronner --label=test_job --namespace=testenv --event-group=eventgroup --group=metricgroup --warn-after=10 --event --log-fail --lock --sensitive -- /bin/true$)
   end
 end

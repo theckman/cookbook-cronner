@@ -26,8 +26,8 @@ module Cronner
 
       c_str << "--label=#{format_string(label)} "
       c_str << "--namespace=#{format_string(namespace)} " unless namespace.nil? || namespace.empty?
-      c_str << "--event_group=#{format_string(event_group)} " unless event_group.nil? || event_group.empty?
-      c_str << "--metric_group=#{format_string(metric_group)} " unless metric_group.nil? || metric_group.empty?
+      c_str << "--event-group=#{format_string(event_group)} " unless event_group.nil? || event_group.empty?
+      c_str << "--group=#{format_string(metric_group)} " unless metric_group.nil? || metric_group.empty?
 
       c_str << "--warn-after=#{warn_after} " if warn_after > 0
       c_str << "--wait-secs=#{wait_secs_for_lock} " if lock && wait_secs_for_lock > 0
