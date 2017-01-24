@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default['cronner']['default_install_version'] = '0.4.2'
+default['cronner']['default_install_version'] = '0.5.0'
 
 default['cronner']['known_versions'].tap do |v|
   v['0.4.1']['linux-amd64']['checksum'] = '11cfc853ea484aac75ebe90cafb9b31f8e8ba6fc58bce4ac11d58c63ab5a02ae'
   v['0.4.2']['linux-amd64']['checksum'] = 'd633bb540371e600180011fdf5ffe9c99a8c2d015d78ada00624239af6909a06'
+  v['0.5.0']['linux-amd64']['checksum'] = '29de34468bccfaa85c0ce5f1ef887dcd49f1b956625e5deebd44ec0c762f9a4b'
 end
