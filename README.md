@@ -69,6 +69,8 @@ The LWRP supports either `:create` or `:delete`.
 |metric_group|The group tag to add to the metrics emitted|nil|
 |label|The label (name) of the cron job, used for metrics and events|resource_name|
 |namespace|The namespace to emit metrics under, the binary uses 'cronner' if this is omitted|nil|
+|passthru|Attach the output of the command to the controlling TTY|false|
+|use_parent|Tag the events and metrics with the parameters provided by the parent invocation of `cronner`|false|
 |sensitive_output|This tells cronner to try and avoid printing the output of the command because it may contain sensitive data|false|
 |warn_after|Number of seconds to let cronner run a job before it emits a warning that it's running too long|0 (disabled)|
 |wait_secs_for_lock|Tells cronner how long it should wait for the exclusive lock before bailing out|0 (disabled)|
