@@ -79,6 +79,7 @@ property :wait_secs_for_lock, Integer, default: 0
 include Cronner::LWRPHelpers
 
 action :create do
+  include_recipe 'cronner'
   include_recipe 'cron'
 
   cron_d format_string(job_name) do
