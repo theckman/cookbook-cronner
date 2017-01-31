@@ -13,7 +13,7 @@
 # limitations under the License.
 
 name 'cronner'
-version '0.3.1'
+version '0.3.2'
 license 'Apache 2.0'
 
 description 'Installs/Configures cronner'
