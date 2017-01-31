@@ -16,8 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe 'cronner'
-
 cronner 'test job' do
   command '/bin/true'
   minute '0'
@@ -34,4 +32,21 @@ cronner 'test job' do
   sensitive_output true
   warn_after 10
   wait_secs_for_lock
+end
+
+cronner 'test job two' do
+  command '/bin/true'
+  event true
+  event_fail true
+  log_fail true
+  use_parent true
+  passthru true
+  event_group 'eventgroup'
+  metric_group 'metricgroup'
+  lock true
+  namespace 'testenv'
+  sensitive_output true
+  warn_after 10
+  wait_secs_for_lock
+  predefined_value '@hourly'
 end
