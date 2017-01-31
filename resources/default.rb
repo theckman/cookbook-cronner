@@ -98,6 +98,7 @@ action :create do
     comment new_resource.comment
     environment new_resource.environment
     mode new_resource.mode
+    predefined_value new_resource.predefined_value
     action :create
   end
 end
@@ -119,6 +120,7 @@ action :delete do
     comment new_resource.comment
     environment new_resource.environment
     mode new_resource.mode
+    predefined_value new_resource.predefined_value
     action :delete
   end
 end
