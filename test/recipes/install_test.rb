@@ -16,7 +16,7 @@
 
 # Inspec test for recipe cronner::install
 
-version = '0.5.0'.freeze
+version = '0.6.1'.freeze
 
 describe file("/opt/cronner-linux-amd64-v#{version}") do
   it { should be_directory }
