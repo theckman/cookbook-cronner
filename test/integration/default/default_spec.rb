@@ -14,7 +14,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inspec test for cronner resource
+version = '0.6.1'.freeze
+
+describe file("/opt/cronner-linux-amd64-v#{version}") do
+  it { should be_directory }
+end
+
+describe file("/opt/cronner-linux-amd64-v#{version}/cronner") do
+  it { should be_file }
+  it { should be_executable }
+  it { should be_readable }
+end
+
+describe file('/usr/local/bin/cronner') do
+  it { should be_file }
+  it { should be_symlink }
+  it { should be_linked_to "/opt/cronner-linux-amd64-v#{version}/cronner" }
+end
 
 describe file('/etc/cron.d/test_job') do
   it { should be_file }
