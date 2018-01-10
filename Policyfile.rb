@@ -13,11 +13,11 @@ default_source :supermarket
 run_list "cronner::default"
 
 named_run_list :install, 'cronner::install'
-named_run_list :lwrp, 'cronner_lwrp_test'
+named_run_list :resource, 'cronner_resource_test'
 
 # Specify a custom source for a single cookbook:
 cookbook "cronner", path: "."
-cookbook 'cronner_lwrp_test', path: 'test/fixtures/cookbooks/cronner_lwrp_test'
+cookbook 'cronner_resource_test', path: 'test/fixtures/cookbooks/cronner_resource_test'
 cookbook 'cron', '~> 3.0.0'
 
 default['cron']['package_name'] = 'cron'

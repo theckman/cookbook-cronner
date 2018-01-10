@@ -13,7 +13,7 @@
 # limitations under the License.
 
 module Cronner
-  module LWRPHelpers
+  module Helpers
     def format_string(value)
       value
       .gsub(' ', '_')
