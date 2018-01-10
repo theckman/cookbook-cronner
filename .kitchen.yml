@@ -25,18 +25,18 @@ platforms:
   - name: ubuntu-16.04
 
 suites:
-  - name: install
+  - name: default
     provisioner:
-      named_run_list: install
+      named_run_list: default
     verifier:
       inspec_tests:
-        - test/recipes/install_test.rb
+        - test/recipes/default_test.rb
     attributes:
   - name: resource
     provisioner:
       named_run_list: resource
     verifier:
       inspec_tests:
-        - test/recipes/install_test.rb
+        - test/recipes/default_test.rb
         - test/recipes/resource_test.rb
     attributes:

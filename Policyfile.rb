@@ -12,7 +12,7 @@ default_source :supermarket
 # run_list: chef-client will run these recipes in the order specified.
 run_list "cronner::default"
 
-named_run_list :install, 'cronner::install'
+named_run_list :default, 'cronner::default'
 named_run_list :resource, 'cronner_resource_test'
 
 # Specify a custom source for a single cookbook:
