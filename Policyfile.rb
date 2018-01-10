@@ -18,6 +18,6 @@ named_run_list :lwrp, 'cronner_lwrp_test'
 # Specify a custom source for a single cookbook:
 cookbook "cronner", path: "."
 cookbook 'cronner_lwrp_test', path: 'test/fixtures/cookbooks/cronner_lwrp_test'
-cookbook 'cron', '~> 3.0.0'
+cookbook 'cron', '~> 5.0'
 
 default['cron']['package_name'] = 'cron'

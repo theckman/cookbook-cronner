@@ -25,4 +25,4 @@ maintainer_email 't@heckman.io'
 issues_url 'https://github.com/theckman/cookbook-cronner/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/theckman/cookbook-cronner' if respond_to?(:source_url)
 
-depends 'cron', '~> 3.0.0'
+depends 'cron', '~> 5.0'
