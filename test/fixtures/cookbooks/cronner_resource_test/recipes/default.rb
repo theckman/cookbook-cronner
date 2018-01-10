@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: cronner_lwrp_test
+# Cookbook Name:: cronner_resource_test
 # Recipe:: default
 #
 # Copyright 2017 Tim Heckman <t@heckman.io>

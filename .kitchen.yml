@@ -32,11 +32,11 @@ suites:
       inspec_tests:
         - test/recipes/install_test.rb
     attributes:
-  - name: lwrp
+  - name: resource
     provisioner:
-      named_run_list: lwrp
+      named_run_list: resource
     verifier:
       inspec_tests:
         - test/recipes/install_test.rb
-        - test/recipes/lwrp_test.rb
+        - test/recipes/resource_test.rb
     attributes:

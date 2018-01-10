@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: cronner
-# LWRP:: cronner
+# Resource:: cronner
 #
 # Copyright 2017 Tim Heckman <t@heckman.io>
 #
@@ -22,7 +22,7 @@ default_action :create
 property :job_name, String, name_property: true
 
 ###
-# cron_d LWRP properties
+# cron_d Resource properties
 #
 property :command, String, required: true
 property :cookbook, String, default: 'cron'
@@ -76,7 +76,7 @@ property :warn_after, Integer, default: 0
 property :wait_secs_for_lock, Integer, default: 0
 
 # grab format_string and command_string helper methods
-include Cronner::LWRPHelpers
+include Cronner::Helpers
 
 action :create do
   include_recipe 'cronner'

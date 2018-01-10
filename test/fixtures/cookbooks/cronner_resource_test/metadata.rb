@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name 'cronner_lwrp_test'
+name 'cronner_resource_test'
 version '0.0.1'
 license 'Apache 2.0'
 

@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inspec test for recipe cronner LWRP
+# Inspec test for cronner resource
 
 describe file('/etc/cron.d/test_job') do
   it { should be_file }

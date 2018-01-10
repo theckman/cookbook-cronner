@@ -1,8 +1,8 @@
 # cronner
 
 The `cronner` cookbook installs [cronner](https://github.com/theckman/cronner)
-and provides an LWRP for configuring cron jobs that are wrapped with `cronner`.
-The LWRP is a wrapper of the `cron_d` LWRP and injects the `cronner` invocation
+and provides a custom resource for configuring cron jobs that are wrapped with `cronner`.
+The resource is a wrapper of the `cron_d` resource and injects the `cronner` invocation
 before your command allowing the status and metrics to be collected.
 
 ## License
@@ -22,11 +22,11 @@ This cookbook only has one attribute to impact the installation
 (`node['cronner']['default_install_version']`), which takes the cronner version
 string (e.g., `0.4.2`) that you want to have installed.
 
-## LWRP Usage
-The `cronner` cookbook provides an LWRP to install cron jobs that are monitored
-by `cronner`. This LWRP is a light wrapper around the stellar `cron_d` LWRP from
+## Resource Usage
+The `cronner` cookbook provides a custom resource to install cron jobs that are monitored
+by `cronner`. This resource is a light wrapper around the stellar `cron_d` resource from
 the [cron](https://supermarket.chef.io/cookbooks/cron) cookbook. That means the
-`cronner` LWRP has all the same attributes available as the `cron_d` LWRP. For
+`cronner` resource has all the same attributes available as the `cron_d` resource. For
 information on the `cron_d` resource please view the `Resource and Providers`
 section of the [cron cookbook's](https://supermarket.chef.io/cookbooks/cron)
 README.
@@ -56,8 +56,8 @@ cronner 'db_backup' do
 end
 ```
 
-### Cronner LWRP Attributes
-The LWRP supports either `:create` or `:delete`.
+### Cronner Custom Resource Attributes
+The custom resource supports either `:create` or `:delete`.
 
 |Attribute|Description|Default|
 |---------|-----------|-------|
