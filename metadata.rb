@@ -15,6 +15,7 @@
 name 'cronner'
 version '0.3.4'
 license 'Apache 2.0'
+chef_version '>= 12.7'
 
 description 'Installs/Configures cronner'
 long_description 'Installs/Configures cronner'
