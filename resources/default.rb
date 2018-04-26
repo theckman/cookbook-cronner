@@ -82,7 +82,7 @@ action :create do
   include_recipe 'cronner'
   include_recipe 'cron'
 
-  cron_d format_string(job_name) do
+  cron_d format_string(new_resource.job_name) do
     command command_string
     cookbook new_resource.cookbook
     minute new_resource.minute
@@ -104,7 +104,7 @@ action :create do
 end
 
 action :delete do
-  cron_d format_string(job_name) do
+  cron_d format_string(new_resource.job_name) do
     command command_string
     cookbook new_resource.cookbook
     minute new_resource.minute
