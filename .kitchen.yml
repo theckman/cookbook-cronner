@@ -1,6 +1,7 @@
 ---
 driver:
   name: dokken
+  chef_version: <%= ENV['CHEF_VERSION'] || 'latest' %>
   privileged: true  # because Docker and SystemD/Upstart
 
 transport:
@@ -11,6 +12,7 @@ provisioner:
 
 verifier:
   name: inspec
+  chef_license: accept
 
 platforms:
   - name: ubuntu-18.04
