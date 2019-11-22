@@ -1,6 +1,6 @@
 # # encoding: utf-8
 #
-# Copyright 2017 Tim Heckman <t@heckman.io>
+# Copyright:: 2017 Tim Heckman <t@heckman.io>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ describe file('/etc/cron.d/test_job') do
   its('group') { should eql 'root' }
   its('content') { should match /^# Crontab for test_job managed by Chef\./ }
   its('content') do
-    should match %r(^0 12 \* \* \* root /usr/local/bin/cronner --label=test_job --namespace=testenv --event-group=eventgroup --group=metricgroup --warn-after=10 --event --log-fail --lock --use-parent --passthru --sensitive -- /bin/true$)
+    should match %r{^0 12 \* \* \* root /usr/local/bin/cronner --label=test_job --namespace=testenv --event-group=eventgroup --group=metricgroup --warn-after=10 --event --log-fail --lock --use-parent --passthru --sensitive -- /bin/true$}
   end
 end
 
@@ -50,6 +50,6 @@ describe file('/etc/cron.d/test_job_two') do
   its('group') { should eql 'root' }
   its('content') { should match /^# Crontab for test_job_two managed by Chef\./ }
   its('content') do
-    should match %r(^@hourly root /usr/local/bin/cronner --label=test_job_two --namespace=testenv --event-group=eventgroup --group=metricgroup --warn-after=10 --event --log-fail --lock --use-parent --passthru --sensitive -- /bin/true$)
+    should match %r{^@hourly root /usr/local/bin/cronner --label=test_job_two --namespace=testenv --event-group=eventgroup --group=metricgroup --warn-after=10 --event --log-fail --lock --use-parent --passthru --sensitive -- /bin/true$}
   end
 end

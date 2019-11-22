@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: cronner_resource_test
+# Cookbook:: cronner_resource_test
 # Recipe:: default
 #
-# Copyright 2017 Tim Heckman <t@heckman.io>
+# Copyright:: 2017 Tim Heckman <t@heckman.io>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
