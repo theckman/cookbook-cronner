@@ -25,7 +25,6 @@ property :job_name, String, name_property: true
 # cron_d Resource properties
 #
 property :command, String, required: true
-property :cookbook, String, default: 'cron'
 
 property :predefined_value, String
 property :minute, [String, Integer], default: '*'
@@ -80,11 +79,9 @@ include Cronner::Helpers
 
 action :create do
   include_recipe 'cronner'
-  include_recipe 'cron'
 
   cron_d format_string(new_resource.job_name) do
     command command_string
-    cookbook new_resource.cookbook
     minute new_resource.minute
     hour new_resource.hour
     day new_resource.day
@@ -106,7 +103,6 @@ end
 action :delete do
   cron_d format_string(new_resource.job_name) do
     command command_string
-    cookbook new_resource.cookbook
     minute new_resource.minute
     hour new_resource.hour
     day new_resource.day

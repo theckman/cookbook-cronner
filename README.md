@@ -24,12 +24,10 @@ string (e.g., `0.4.2`) that you want to have installed.
 
 ## Resource Usage
 The `cronner` cookbook provides a custom resource to install cron jobs that are monitored
-by `cronner`. This resource is a light wrapper around the stellar `cron_d` resource from
-the [cron](https://supermarket.chef.io/cookbooks/cron) cookbook. That means the
+by `cronner`. This resource is a light wrapper around the stellar `cron_d` resource, originally from
+the [cron](https://supermarket.chef.io/cookbooks/cron) cookbook, but now included with Chef. That means the
 `cronner` resource has all the same attributes available as the `cron_d` resource. For
-information on the `cron_d` resource please view the `Resource and Providers`
-section of the [cron cookbook's](https://supermarket.chef.io/cookbooks/cron)
-README.
+information on the `cron_d` resource please see the [documentation](http://docs.chef.io/resource_cron_d.html).
 
 ```ruby
 cronner 'db_backup' do
