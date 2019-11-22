@@ -31,7 +31,7 @@ information on the `cron_d` resource please view the `Resource and Providers`
 section of the [cron cookbook's](https://supermarket.chef.io/cookbooks/cron)
 README.
 
-```Ruby
+```ruby
 cronner 'db_backup' do
   command 'pg_dump ...'
   minute '0'
