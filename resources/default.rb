@@ -17,6 +17,7 @@
 # limitations under the License.
 
 resource_name :cronner
+provides :cronner
 default_action :create
 
 property :job_name, String, name_property: true
