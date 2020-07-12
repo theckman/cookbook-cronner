@@ -46,29 +46,29 @@ property :mode, [String, Integer], default: '0644'
 # cronner properties
 #
 # flag: -e/--event
-property :event, [TrueClass, FalseClass], default: false
+property :event, [true, false], default: false
 # flag: -E/--event-fail
-property :event_fail, [TrueClass, FalseClass], default: false
+property :event_fail, [true, false], default: false
 # flag: -F/--log-fail
-property :log_fail, [TrueClass, FalseClass], default: false
+property :log_fail, [true, false], default: false
 # flag: -G/--event-group
-property :event_group, [String, NilClass], default: nil
+property :event_group, [String, NilClass]
 # flag: -g/--group
 # use name metric_group to avoid colliding with group resource
-property :metric_group, [String, NilClass], default: nil
+property :metric_group, [String, NilClass]
 # flag: -k/--lock
-property :lock, [TrueClass, FalseClass], default: false
+property :lock, [true, false], default: false
 # flag: -l/--label
-property :label, [String, NilClass], default: nil
+property :label, [String, NilClass]
 # flag: -N/--namespace
-property :namespace, [String, NilClass], default: nil
+property :namespace, [String, NilClass]
 # flag: -p/--passthru
-property :passthru, [TrueClass, FalseClass], default: false
+property :passthru, [true, false], default: false
 # flag: -P/--use-parent
-property :use_parent, [TrueClass, FalseClass], default: false
+property :use_parent, [true, false], default: false
 # flag: -s/--sensitive
 # use name sensitive_output to avoid colliding with built-in sensitive property
-property :sensitive_output, [TrueClass, FalseClass], default: false
+property :sensitive_output, [true, false], default: false
 # flag: -w/--warn-after
 property :warn_after, Integer, default: 0
 # flag: -W/--wait-secs

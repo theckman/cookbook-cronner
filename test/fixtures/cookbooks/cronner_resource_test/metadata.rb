@@ -14,12 +14,11 @@
 
 name 'cronner_resource_test'
 version '0.0.1'
-license 'Apache 2.0'
+license 'Apache-2.0'
 
 maintainer 'Tim Heckman'
 maintainer_email 't@heckman.io'
 
 description 'Cookbook for integration tests of the cronner cookbook'
-long_description 'Cookbook for integration tests of the cronner cookbook'
 
 depends 'cronner'
