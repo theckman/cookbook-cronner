@@ -1,4 +1,4 @@
-# Copyright 2017 Tim Heckman <t@heckman.io>
+# Copyright:: 2017 Tim Heckman <t@heckman.io>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,10 +13,9 @@
 # limitations under the License.
 
 module Cronner
-  module LWRPHelpers
+  module Helpers
     def format_string(value)
-      value
-      .gsub(' ', '_')
+      value.tr(' ', '_')
     end
 
     def command_string
