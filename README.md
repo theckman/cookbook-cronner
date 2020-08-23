@@ -1,5 +1,7 @@
 # cronner
 
+![ci](https://github.com/theckman/cookbook-cronner/workflows/ci/badge.svg)
+
 The `cronner` cookbook installs [cronner](https://github.com/theckman/cronner)
 and provides a custom resource for configuring cron jobs that are wrapped with `cronner`.
 The resource is a wrapper of the `cron_d` resource and injects the `cronner` invocation
