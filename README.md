@@ -1,5 +1,6 @@
 # cronner
 
+[![Cookbook Version](https://img.shields.io/cookbook/v/cronner.svg)](https://supermarket.chef.io/cookbooks/cronner)
 ![ci](https://github.com/theckman/cookbook-cronner/workflows/ci/badge.svg)
 
 The `cronner` cookbook installs [cronner](https://github.com/theckman/cronner)
