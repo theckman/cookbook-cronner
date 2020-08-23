@@ -9,11 +9,13 @@ The resource is a wrapper of the `cron_d` resource and injects the `cronner` inv
 before your command allowing the status and metrics to be collected.
 
 ## License
+
 This cookbook is licensed under the Apache 2.0 License. Please refer to
 the [LICENSE](https://github.com/theckman/cookbook-cronner/blob/master/LICENSE)
 file for the full contents of the license.
 
 ## Recipe Usage
+
 This cookbook intends to try and track all major versions of the `cronner`
 binary, to make it easy to switch between versions just with an attribute
 change. By default this cookbook uses the latest version if one is not specified
@@ -21,11 +23,13 @@ otherwise. To install `cronner`, just execute the `cronner::default` recipe by
 including it one of your recipes or by adding it to the `run_list`.
 
 ### Recipe Attributes
+
 This cookbook only has one attribute to impact the installation
 (`node['cronner']['default_install_version']`), which takes the cronner version
 string (e.g., `0.4.2`) that you want to have installed.
 
 ## Resource Usage
+
 The `cronner` cookbook provides a custom resource to install cron jobs that are monitored
 by `cronner`. This resource is a light wrapper around the stellar `cron_d` resource, originally from
 the [cron](https://supermarket.chef.io/cookbooks/cron) cookbook, but now included with Chef. That means the
@@ -58,6 +62,7 @@ end
 ```
 
 ### Cronner Custom Resource Attributes
+
 The custom resource supports either `:create` or `:delete`.
 
 |Attribute|Description|Default|
