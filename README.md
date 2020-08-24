@@ -8,12 +8,6 @@ and provides a custom resource for configuring cron jobs that are wrapped with `
 The resource is a wrapper of the `cron_d` resource and injects the `cronner` invocation
 before your command allowing the status and metrics to be collected.
 
-## License
-
-This cookbook is licensed under the Apache 2.0 License. Please refer to
-the [LICENSE](https://github.com/theckman/cookbook-cronner/blob/master/LICENSE)
-file for the full contents of the license.
-
 ## Recipe Usage
 
 This cookbook intends to try and track all major versions of the `cronner`
@@ -80,3 +74,9 @@ The custom resource supports either `:create` or `:delete`.
 | `sensitive_output`   | This tells cronner to try and avoid printing the output of the command because it may contain sensitive data | false           |
 | `warn_after`         | Number of seconds to let cronner run a job before it emits a warning that it's running too long              | 0 (disabled)    |
 | `wait_secs_for_lock` | Tells cronner how long it should wait for the exclusive lock before bailing out                              | 0 (disabled)    |
+
+## License
+
+This cookbook is licensed under the Apache 2.0 License. Please refer to
+the [LICENSE](https://github.com/theckman/cookbook-cronner/blob/master/LICENSE)
+file for the full contents of the license.
