@@ -65,18 +65,18 @@ end
 
 The custom resource supports either `:create` or `:delete`.
 
-|Attribute|Description|Default|
-|---------|-----------|-------|
-|event|Tell cronner to emit an event on job start/stop|false|
-|event_fail|Tell cronner to emit an event only on job failure|false|
-|log_fail|Tell cronner to log a file on disk with the command output on failure only|false|
-|lock|Tell cronner to take a exclusive file lock before running the job|false|
-|event_group|The group tag to add to the events emitted|nil|
-|metric_group|The group tag to add to the metrics emitted|nil|
-|label|The label (name) of the cron job, used for metrics and events|resource_name|
-|namespace|The namespace to emit metrics under, the binary uses 'cronner' if this is omitted|nil|
-|passthru|Attach the output of the command to the controlling TTY|false|
-|use_parent|Tag the events and metrics with the parameters provided by the parent invocation of `cronner`|false|
-|sensitive_output|This tells cronner to try and avoid printing the output of the command because it may contain sensitive data|false|
-|warn_after|Number of seconds to let cronner run a job before it emits a warning that it's running too long|0 (disabled)|
-|wait_secs_for_lock|Tells cronner how long it should wait for the exclusive lock before bailing out|0 (disabled)|
+| Attribute            | Description                                                                                                  | Default         |
+| ---------            | -----------                                                                                                  | -------         |
+| `event`              | Tell cronner to emit an event on job start/stop                                                              | false           |
+| `event_fail`         | Tell cronner to emit an event only on job failure                                                            | false           |
+| `log_fail`           | Tell cronner to log a file on disk with the command output on failure only                                   | false           |
+| `lock`               | Tell cronner to take a exclusive file lock before running the job                                            | false           |
+| `event_group`        | The group tag to add to the events emitted                                                                   | nil             |
+| `metric_group`       | The group tag to add to the metrics emitted                                                                  | nil             |
+| `label`              | The label (name) of the cron job, used for metrics and events                                                | `resource_name` |
+| `namespace`          | The namespace to emit metrics under, the binary uses 'cronner' if this is omitted                            | nil             |
+| `passthru`           | Attach the output of the command to the controlling TTY                                                      | false           |
+| `use_parent`         | Tag the events and metrics with the parameters provided by the parent invocation of `cronner`                | false           |
+| `sensitive_output`   | This tells cronner to try and avoid printing the output of the command because it may contain sensitive data | false           |
+| `warn_after`         | Number of seconds to let cronner run a job before it emits a warning that it's running too long              | 0 (disabled)    |
+| `wait_secs_for_lock` | Tells cronner how long it should wait for the exclusive lock before bailing out                              | 0 (disabled)    |
