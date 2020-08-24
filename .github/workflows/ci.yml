@@ -42,6 +42,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        chef_version:
+          - 15
+          - 16
         os:
           - ubuntu-1804
           - ubuntu-2004
@@ -58,6 +61,7 @@ jobs:
         uses: actionshub/kitchen-dokken@master
         env:
           CHEF_LICENSE: accept-no-persist
+          CHEF_VERSION: ${{ chef_version }}
         with:
           suite: ${{ matrix.suite }}
           os: ${{ matrix.os }}
