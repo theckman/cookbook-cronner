@@ -35,7 +35,7 @@ jobs:
       - name: Run Markdown Lint
         uses: actionshub/markdownlint@master
         with:
-          path: --rules ~MD013 ./
+          path: --rules ~MD004,~MD007,~MD013 ./
 
   dokken:
     needs: [mdl, yamllint, delivery]
