@@ -1,5 +1,5 @@
 name             'cronner'
-version          '0.3.4'
+version          '1.0.0'
 maintainer       'Tim Heckman'
 maintainer_email 't@heckman.io'
 license          'Apache-2.0'

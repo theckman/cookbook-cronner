@@ -2,6 +2,29 @@
 
 This file is used to list changes made in each version of the example cookbook.
 
+## 1.0.0
+
+### Changed
+
+* Convert LWRP → Custom Resource & update for Chef >= 14 compatibility
+* Use built-in `cron_d` resource from Chef >= 14.4.0
+    - Drop test assertions covered by the `cron_d` resource’s own testing
+* Rename `cronner::install` → `cronner::default` to simplify things
+* Update metadata per current standards
+* Swap Policyfile for Berksfile
+    - Six of one, but it’s what @jeffbyrnes is more familiar with & he did this refactor so 🤷
+* Simplify testing using kitchen-dokken
+
+### Added
+
+* Add ChefSpec tests
+* Use community cookbook Delivery config
+* Add testing using Chef 16
+
+### Fixed
+
+* Satisfy `cookstyle`
+
 ## 0.3.4
 
 * install `cronner` `v0.6.1` by default
