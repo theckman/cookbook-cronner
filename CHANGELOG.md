@@ -48,4 +48,4 @@ This file is used to list changes made in each version of the example cookbook.
 
 Initial release.
 
-- support installation of `cronner` to `/usr/local/bin`
+* support installation of `cronner` to `/usr/local/bin`
