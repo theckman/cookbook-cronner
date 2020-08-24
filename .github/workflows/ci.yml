@@ -61,7 +61,7 @@ jobs:
         uses: actionshub/kitchen-dokken@master
         env:
           CHEF_LICENSE: accept-no-persist
-          CHEF_VERSION: ${{ chef_version }}
+          CHEF_VERSION: ${{ matrix.chef_version }}
         with:
           suite: ${{ matrix.suite }}
           os: ${{ matrix.os }}
